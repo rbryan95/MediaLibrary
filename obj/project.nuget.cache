@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ph5XnaUjugLJ5nG19wsqkEW+oxWEIoMOVJ6RHB/XRPUQHx3ZQy/dB6RgS2Oz0kJeCJziKId4zXV8AEo/l+Eg9w==",
+  "dgSpecHash": "MhxXKCuMCEWqSFYuhWGVc1sRtFU7xHVzJVQVLEZy7ISAojQmJqTHVGawARiB8yZhjza9xuI09ZH/FCHM4sjubA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bryan\\Documents\\Net\\MediaLibrary\\MediaLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Bryan\\.nuget\\packages\\nlog\\5.1.1\\nlog.5.1.1.nupkg.sha512"
+  ],
   "logs": []
 }
