@@ -104,4 +104,13 @@ public class MovieFile
             logger.Error(ex.Message);
         }
     }
+
+public void DisplayAllMovies()
+{
+    foreach (var movie in Movies)
+    {
+        Console.WriteLine($"ID: {movie.mediaId}, Title: {movie.title}, Genres: {string.Join(", ", movie.genres)}, Director: {movie.director}, Running Time: {movie.runningTime}");
+    }
+}
+
 }
