@@ -112,5 +112,5 @@ public void DisplayAllMovies()
         Console.WriteLine($"ID: {movie.mediaId}, Title: {movie.title}, Genres: {string.Join(", ", movie.genres)}, Director: {movie.director}, Running Time: {movie.runningTime}");
     }
 }
-
+ 
 }
