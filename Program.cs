@@ -21,8 +21,9 @@ class Program
                 Console.WriteLine("Movie Library Program");
                 Console.WriteLine("1. Display All Movies");
                 Console.WriteLine("2. Add a New Movie");
-                Console.WriteLine("3. Exit");
-                Console.Write("Enter your choice (1/2/3): ");
+                Console.WriteLine("3. Find Movie by Title");
+                Console.WriteLine("4. Exit");
+                Console.Write("Enter your choice : ");
                 string choice = Console.ReadLine();
 
                 switch (choice)
@@ -39,6 +40,24 @@ class Program
                         }
                         break;
                     case "3":
+                        Console.Write("Enter the title to search for: ");
+                        string searchTitle = Console.ReadLine();
+                        List<Movie> searchResults = SearchMoviesByTitle(movieFile, searchTitle);
+                        if (searchResults.Count > 0)
+                        {
+                            Console.WriteLine($"Search Results ({searchResults.Count} matches):");
+                            foreach (Movie movie in searchResults)
+                            {
+                                Console.WriteLine(movie.Display());
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No matches found.");
+                        }
+                        break;
+                        
+                    case "4":
                         continueRunning = false;
                         break;
                     default:
@@ -51,7 +70,7 @@ class Program
         logger.Info("Program ended");
     }
 
-    static Movie GetNewMovie()
+    static Movie GetNewMovie() 
     {
         Console.WriteLine("Enter details for the new movie:");
         Console.Write("Title: ");
