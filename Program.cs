@@ -101,4 +101,10 @@ class Program
             Console.WriteLine(movie.Display());
         }
     }
+
+    //List movies to find movied in the file 
+     static List<Movie> SearchMoviesByTitle(MovieFile movieFile, string title)
+    {
+        return movieFile.Movies.Where(movie => movie.title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
 }
